@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="1354.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.MainPageController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" onMouseClicked="#listViewAction" style="-fx-background-color: beige;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <ListView fx:id="userListView" layoutX="521.0" layoutY="268.0" onMouseClicked="#listViewAction" prefHeight="327.0" prefWidth="165.0" />
+            <Label fx:id="lblNewUser" contentDisplay="CENTER" layoutX="14.0" layoutY="17.0" prefHeight="51.0" prefWidth="580.0" text="CREATE NEW USER">
+               <font>
+                  <Font name="Levenim MT" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogout" buttonType="RAISED" layoutX="1132.0" layoutY="34.0" onAction="#btnLogoutAction" prefHeight="34.0" prefWidth="150.0" ripplerFill="#941f1f" style="-fx-background-color: grey;" text="LOG OUT">
+               <font>
+                  <Font name="Levenim MT" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="14.0" layoutY="608.0" onAction="#btnSaveAction" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: GREY;" text="SAVE">
+               <effect>
+                  <ColorAdjust brightness="0.19" contrast="0.43" hue="-0.38" saturation="0.14" />
+               </effect>
+            </JFXButton>
+            <Pane layoutX="15.0" layoutY="96.0" prefHeight="487.0" prefWidth="255.0">
+               <children>
+                  <VBox prefHeight="485.0" prefWidth="254.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="txtID" prefHeight="35.0" prefWidth="275.0" promptText="ID">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFirstName" prefHeight="35.0" prefWidth="275.0" promptText="First Name">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtLastName" prefHeight="35.0" prefWidth="275.0" promptText="Last Name">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </TextField>
+                        <HBox prefHeight="25.0" prefWidth="325.0">
+                           <children>
+                              <RadioButton fx:id="radioMale" mnemonicParsing="false" onAction="#radioMaleAction" />
+                              <Label fx:id="lblMale" prefHeight="17.0" prefWidth="79.0" text="Male" />
+                              <RadioButton fx:id="radioFemale" mnemonicParsing="false" onAction="#radioFemaleAction" HBox.hgrow="NEVER" />
+                              <Label fx:id="lblFemale" text="Female" />
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </HBox>
+                        <TextField fx:id="txtEmail" prefHeight="35.0" prefWidth="275.0" promptText="Email">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtUsername" prefHeight="35.0" prefWidth="275.0" promptText="Username">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="passPassword" prefHeight="35.0" prefWidth="267.0" promptText="Password">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </PasswordField>
+                        <DatePicker fx:id="dateofbirth" prefHeight="35.0" prefWidth="352.0" promptText="Date of Birth" />
+                        <TextField fx:id="txtPhoneNumber" prefHeight="35.0" prefWidth="275.0" promptText="Phone Number">
+                           <font>
+                              <Font name="Levenim MT" size="13.0" />
+                           </font>
+                        </TextField>
+                        <HBox prefHeight="73.0" prefWidth="254.0" spacing="30.0">
+                           <children>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkBoxPlaying" mnemonicParsing="false" onAction="#checkBoxPlayingAction" prefHeight="17.0" prefWidth="118.0" text="Playing" />
+                                    <CheckBox fx:id="checkBoxSinging" mnemonicParsing="false" onAction="#checkBoxSingingAction" prefHeight="17.0" prefWidth="118.0" text="Singing" />
+                                    <CheckBox fx:id="checkBoxDancing" mnemonicParsing="false" onAction="#checkBoxDancingAction" prefHeight="17.0" prefWidth="116.0" text="Dancing" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <ComboBox fx:id="userCombo" layoutX="14.0" layoutY="659.0" onAction="#comboBoxAction" prefHeight="32.0" prefWidth="101.0" promptText="Select User.." style="-fx-background-color: grey;">
+               <effect>
+                  <ColorAdjust brightness="0.19" contrast="0.43" hue="-0.38" saturation="0.14" />
+               </effect>
+            </ComboBox>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="234.0" layoutY="608.0" onAction="#btnDeleteAction" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: GREY;" text="DELETE">
+               <effect>
+                  <ColorAdjust brightness="0.19" contrast="0.43" hue="-0.38" saturation="0.14" />
+               </effect>
+            </JFXButton>
+            <VBox layoutX="270.0" layoutY="96.0" prefHeight="385.0" prefWidth="46.0" spacing="10.0">
+               <children>
+                  <Label fx:id="lblIDValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="lblFirstNameValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLastNameValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblGenderValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmailValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsernameValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPasswordValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDOBValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPhoneNumberValidation" prefHeight="33.0" prefWidth="0.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="316.0" layoutY="96.0" prefHeight="385.0" prefWidth="165.0" spacing="10.0">
+               <children>
+                  <Label fx:id="lblIDValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="lblFirstNameValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLastNameValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblGenderValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmailValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsernameValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPasswordValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDOBValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPhoneNumberValidation1" prefHeight="33.0" prefWidth="160.0" textFill="#c91010">
+                     <font>
+                        <Font name="Levenim MT Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </VBox>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="127.0" layoutY="608.0" onAction="#btnUpdateAction" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: GREY;" text="UPDATE">
+               <effect>
+                  <ColorAdjust brightness="0.19" contrast="0.43" hue="-0.38" saturation="0.14" />
+               </effect>
+            </JFXButton>
+            <ScrollPane layoutX="693.0" layoutY="77.0" prefHeight="518.0" prefWidth="589.0">
+               <content>
+                  <TableView fx:id="tableData" onMouseClicked="#tableAction" prefHeight="496.0" prefWidth="756.0">
+                    <columns>
+                      <TableColumn fx:id="colID" prefWidth="48.0" text="ID" />
+                      <TableColumn fx:id="colFirstName" prefWidth="94.0" text="First Name" />
+                        <TableColumn fx:id="colLastName" prefWidth="82.0" text="Last Name" />
+                        <TableColumn fx:id="colGender" prefWidth="54.0" text="Gender" />
+                        <TableColumn fx:id="colEmail" prefWidth="79.0" text="Email" />
+                        <TableColumn fx:id="colUsername" prefWidth="75.0" text="Username" />
+                        <TableColumn fx:id="colPassword" prefWidth="75.0" text="Password" />
+                        <TableColumn fx:id="colDOB" prefWidth="66.0" text="DOB" />
+                        <TableColumn fx:id="colPhoneNumber" prefWidth="75.0" text="Phone Number" />
+                        <TableColumn fx:id="colHobbies" prefWidth="75.0" text="Hobbies" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Label fx:id="lblHobbiesValidation" layoutX="335.0" layoutY="504.0" prefHeight="43.0" prefWidth="160.0" textFill="#ee0c0c">
+               <font>
+                  <Font name="Levenim MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearch" layoutX="521.0" layoutY="34.0" onKeyPressed="#txtSearchAction" prefHeight="35.0" prefWidth="165.0" promptText="Search">
+               <font>
+                  <Font name="Levenim MT" size="13.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btnBrowse" buttonType="RAISED" layoutX="234.0" layoutY="659.0" onAction="#btnBrowseAction" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: GREY;" text="BROWSE">
+               <effect>
+                  <ColorAdjust brightness="0.19" contrast="0.43" hue="-0.38" saturation="0.14" />
+               </effect>
+            </JFXButton>
+            <JFXTextArea fx:id="pathTextArea" layoutX="349.0" layoutY="603.0" maxWidth="296.0" minWidth="179.0" prefHeight="90.0" prefWidth="179.0" promptText="Path of file(s)" />
+            <ImageView fx:id="profilePicture" fitHeight="176.0" fitWidth="160.0" layoutX="521.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

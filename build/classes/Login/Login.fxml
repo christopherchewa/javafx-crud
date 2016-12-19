@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="278.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
+   <children>
+      <Pane layoutX="16.0" layoutY="10.0" prefHeight="346.0" prefWidth="491.0" style="-fx-background-color: beige;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="96.0" layoutY="84.0" prefHeight="40.0" prefWidth="300.0" promptText="Username">
+               <font>
+                  <Font name="Levenim MT" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPassword" layoutX="96.0" layoutY="134.0" prefHeight="40.0" prefWidth="300.0" promptText="Password">
+               <font>
+                  <Font name="Levenim MT" size="13.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="171.0" layoutY="204.0" onAction="#btnLoginAction" prefHeight="40.0" prefWidth="150.0" ripplerFill="#cd9d23" style="-fx-background-color: grey;" text="LOGIN">
+               <effect>
+                  <ColorAdjust brightness="0.33" contrast="0.43" hue="-0.38" saturation="0.14" />
+               </effect>
+               <font>
+                  <Font name="Levenim MT" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="36.0" prefHeight="25.0" prefWidth="300.0" text="Enter Your Login Credentials">
+               <font>
+                  <Font name="Levenim MT" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

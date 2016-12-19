@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="loginSQLite.jnlp">
+  <information>
+    <title>loginSQLite</title>
+    <vendor>Chris Chewa</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/controlsfx-8.20.9.jar" size="1018351" download="eager" />
+    <jar href="lib/controlsfx-samples-8.20.9.jar" size="658930" download="eager" />
+    <jar href="lib/fxsampler-1.0.8.jar" size="30435" download="eager" />
+    <jar href="lib/jfoenix.jar" size="2158932" download="eager" />
+    <jar href="lib/openjfx-dialogs-1.0.3.jar" size="149178" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.7.2.jar" size="3201133" download="eager" />
+    <jar href="loginSQLite.jar" size="21860" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="loginSQLite" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Login.Login"  name="loginSQLite" />
+  <update check="always"/>
+</jnlp>
