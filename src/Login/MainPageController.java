@@ -10,7 +10,9 @@ import com.jfoenix.controls.*;
 import java.io.File;
 import Login.LoginController;
 import java.awt.Desktop;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.*;
 import java.util.Arrays;
@@ -82,6 +84,7 @@ public class MainPageController implements Initializable {
     private FileChooser fileChooser;
     private File file;
     private Desktop desktop = Desktop.getDesktop();
+    private FileInputStream fis;
     
     @FXML
     private CheckBox checkBoxPlaying, checkBoxSinging, checkBoxDancing;
@@ -92,7 +95,7 @@ public class MainPageController implements Initializable {
     @FXML
     private ImageView profilePicture;
     
-     @FXML
+    @FXML
     private Image profilePictureImage;
             
     @FXML
@@ -236,6 +239,9 @@ public class MainPageController implements Initializable {
     
     @FXML
     private JFXButton btnUpdate;
+    
+    
+    
 
    
     
@@ -935,10 +941,14 @@ public class MainPageController implements Initializable {
             {
               //desktop.open(file); 
               pathTextArea.setText(file.getAbsolutePath());
-              profilePictureImage = new Image(file.toURI().toString(), 150, 176, true, true);//path, width, height, preserve ratio, smooth
+              profilePictureImage = new Image(file.toURI().toString(), 160, 176, true, true);//path, width, height, preserve ratio, smooth
               
               profilePicture = new ImageView(profilePictureImage);
+              profilePicture.setFitWidth(160);
+              profilePicture.setFitHeight(176);
               profilePicture.setPreserveRatio(true);
+              
+              
             }
             catch(Exception e)
             {
@@ -995,7 +1005,7 @@ public class MainPageController implements Initializable {
             try        
         {
         
-        String query = "INSERT INTO UserDatabase (ID, FirstName, LastName, Gender, Email, Username, Password, DOB, PhoneNumber, Hobbies) VALUES (?,?,?,?,?,?,?,?,?,?)";    
+        String query = "INSERT INTO UserDatabase (ID, FirstName, LastName, Gender, Email, Username, Password, DOB, PhoneNumber, Hobbies, Image) VALUES (?,?,?,?,?,?,?,?,?,?,?)";    
         pst = conn.prepareStatement(query);
         
         
@@ -1011,7 +1021,8 @@ public class MainPageController implements Initializable {
         pst.setString(9, txtPhoneNumber.getText());
         pst.setString(10, checkBoxList.toString());
         
-         
+        fis = new FileInputStream(file);
+        pst.setBinaryStream(11, (InputStream)fis, (int)file.length());
         
        
         pst.execute();
@@ -1091,6 +1102,9 @@ public class MainPageController implements Initializable {
         pst.setString(8, dateofbirth.getEditor().getText());
         pst.setString(9, txtPhoneNumber.getText());
         pst.setString(10, checkBoxList.toString());
+        
+        fis = new FileInputStream(file);
+        pst.setBinaryStream(11, (InputStream)fis, (int)file.length());
         
         pst.execute();
         

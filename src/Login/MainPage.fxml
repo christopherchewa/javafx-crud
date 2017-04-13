@@ -24,7 +24,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="1354.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.MainPageController">
    <children>
-      <Pane layoutX="10.0" layoutY="10.0" onMouseClicked="#listViewAction" style="-fx-background-color: beige;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+     <Pane layoutX="10.0" layoutY="10.0" onMouseClicked="#listViewAction" style="-fx-background-color: beige;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <ListView fx:id="userListView" layoutX="521.0" layoutY="268.0" onMouseClicked="#listViewAction" prefHeight="327.0" prefWidth="165.0" />
             <Label fx:id="lblNewUser" contentDisplay="CENTER" layoutX="14.0" layoutY="17.0" prefHeight="51.0" prefWidth="580.0" text="CREATE NEW USER">

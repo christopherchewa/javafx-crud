@@ -17,7 +17,7 @@
     <jar href="lib/jfoenix.jar" size="2158932" download="eager" />
     <jar href="lib/openjfx-dialogs-1.0.3.jar" size="149178" download="eager" />
     <jar href="lib/sqlite-jdbc-3.7.2.jar" size="3201133" download="eager" />
-    <jar href="loginSQLite.jar" size="21860" download="eager" />
+    <jar href="loginSQLite.jar" size="21951" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="loginSQLite" >
     <param name="requiredFXVersion" value="2.2+"/>
